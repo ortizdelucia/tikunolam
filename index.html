@@ -2,22 +2,27 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" href="favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fundación Tikun Olam</title>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+  body.loaded {
+    opacity: 1;
+  }
     body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
       background-color: #F8F4EF;
       color: #4A2E1B;
       padding-top: 100px;
-    }
-    header {
+    }    header {
       position: fixed;
       top: 0;
       left: 0;
@@ -156,6 +161,10 @@
 <div style="text-align: center; font-size: 0.9em; color: #4A2E1B; margin-top: 2em;">
   Fundación Tikun Olam – Uruguay · Todos los derechos reservados
 </div>
-
+<script>
+    window.addEventListener("load", function () {
+      document.body.classList.add("loaded");
+    });
+  </script>
 </body>
 </html>
